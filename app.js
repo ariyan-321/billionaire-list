@@ -64,11 +64,12 @@ const displayBillionaires = (datas) => {
             <img class="rounded-xl w-[250px]" src="${data.squareImage || "Not available"}" alt="${data.personName}" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title font-extrabold">Position: ${data.position}</h2>
+            <h2 class="card-title text-gray-500 font-extrabold">Position: ${data.position}</h2>
             <h2 class="card-title font-extrabold text-2xl">${data.personName}</h2>
-            <p class="text-2xl font-extrabold">Net-worth: $${netWorthInBillions} Billion</p>
-            <p class="text-2xl font-extrabold">Source: ${data.source || "not available"} </p>
-            <p class="text-2xl font-extrabold">State/City: ${data.state || data.city || "not available"} </p>
+            <p class="text-xl text-gray-500 font-extrabold">Net-worth: $${netWorthInBillions} Billion</p>
+            <p class="text-xl text-gray-500 font-extrabold">Source: ${data.source || "not available"} </p>
+            <p class="text-xl text-gray-500 font-extrabold">Citizenship: ${data.countryOfCitizenship || data.countryOfCitizenship || "not available"} </p>
+            <p class="text-xl text-gray-500 font-extrabold">State/City: ${data.state || data.city || "not available"} </p>
 
 
             <div class="card-actions justify-end">

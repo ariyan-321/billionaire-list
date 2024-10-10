@@ -67,7 +67,9 @@ const displayBillionaires = (datas) => {
             <h2 class="card-title font-extrabold">Position: ${data.position}</h2>
             <h2 class="card-title font-extrabold text-2xl">${data.personName}</h2>
             <p class="text-2xl font-extrabold">Net-worth: $${netWorthInBillions} Billion</p>
+            <p class="text-2xl font-extrabold">Source: ${data.source || "not available"} </p>
             <p class="text-2xl font-extrabold">State/City: ${data.state || data.city || "not available"} </p>
+
 
             <div class="card-actions justify-end">
               <button class="btn" id="btn-${data.position}" onclick="showDetails('${data.position}')">Details</button>            

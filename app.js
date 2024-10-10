@@ -38,7 +38,7 @@ const showDetails = (position) => {
             <h1>${billionaireData.personName || "Not available"}</h1>
             <p><strong>Position:</strong> ${billionaireData.position || "Not available"}</p>
             <p><strong>Net Worth:</strong> $${convertToBillions(billionaireData.finalWorth)} Billion</p>
-            <p><strong>Biography:</strong> ${billionaireData.bios || "Not available"}</p>
+            <p class="text-gray-500"><strong class="text-black">Biography:</strong> ${billionaireData.bios || "Not available"}</p>
         `;
     } else {
         content.innerHTML = `<p>Details not available.</p>`;
@@ -59,7 +59,7 @@ const displayBillionaires = (datas) => {
         const netWorthInBillions = convertToBillions(data.finalWorth);
         const div = document.createElement("div"); 
         div.innerHTML = `
-        <div class="card card-compact bg-base-100 w-96 shadow-xl">
+        <div class="card card-compact bg-base-100 w-96 shadow-xl ">
           <figure class="p-5 rounded-xl">
             <img class="rounded-xl w-[250px]" src="${data.squareImage || "Not available"}" alt="${data.personName}" />
           </figure>
@@ -73,7 +73,7 @@ const displayBillionaires = (datas) => {
 
 
             <div class="card-actions justify-end">
-              <button class="btn" id="btn-${data.position}" onclick="showDetails('${data.position}')">Details</button>            
+              <button class="btn bg-yellow-400 font-extrabold" id="btn-${data.position}" onclick="showDetails('${data.position}')">Details</button>            
             </div>
           </div>
         </div>
